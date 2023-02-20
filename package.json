@@ -1,0 +1,58 @@
+{
+  "name": "web3_react_template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.12",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "antd-mobile": "^5.28.0",
+    "i18next": "^22.4.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.5",
+    "react-scripts": "5.0.1",
+    "reset.css": "^2.0.2",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "dev": "yarn start",
+    "start": "yarn start:dev",
+    "start:dev": "dotenv -e config/.env.development craco start",
+    "start:test": "dotenv -e config/.env.test craco start",
+    "start:pro": "dotenv -e config/.env.production craco start",
+    "build": "yarn build:pro",
+    "build:dev": "dotenv -e config/.env.development craco build",
+    "build:test": "dotenv -e config/.env.test craco build",
+    "build:pro": "dotenv -e config/.env.production craco build",
+    "test": "craco test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.0.0",
+    "babel-plugin-import": "^1.13.6",
+    "dotenv-cli": "^7.0.0"
+  }
+}
