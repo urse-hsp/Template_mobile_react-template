@@ -29,7 +29,7 @@ interface IndexType {
   onClose?: () => any;
 }
 
-const TabbarView: React.FC<IndexType> = () => {
+const AppTabbar: React.FC<IndexType> = () => {
   return (
     <div className="app-tab-bar">
       <TabBar>
@@ -41,4 +41,4 @@ const TabbarView: React.FC<IndexType> = () => {
     </div>
   );
 };
-export default TabbarView;
+export default AppTabbar;

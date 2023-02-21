@@ -1,16 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './router';
-import reportWebVitals from './utils/reportWebVitals';
-import './styles/index.scss';
-import './locales';
+import { BrowserRouter } from 'react-router-dom';
+import App from '@/router';
+import reportWebVitals from '@/utils/reportWebVitals';
+import Provider from '@/models';
+import '@/styles/index.scss';
+import '@/locales';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Provider>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
 );
 

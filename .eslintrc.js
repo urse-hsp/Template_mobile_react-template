@@ -21,6 +21,9 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/space-before-function-paren': 0, // 函数之前的空格
+    '@typescript-eslint/member-delimiter-style': 0, // Typescript接口中强制使用分号
     '@typescript-eslint/comma-dangle': 0, // 末尾添加分号
     '@typescript-eslint/no-floating-promises': 0, // 未分配提示
     '@typescript-eslint/explicit-function-return-type': 'off', // 缺少返回类型

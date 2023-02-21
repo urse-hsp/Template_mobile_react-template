@@ -1,12 +1,12 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useRoutes, type RouteObject } from 'react-router-dom';
 import { LoadingElement } from '@/components/loading';
 import Tabbar from '@/components/tabbar';
 
 const Home = lazy(
   async () => await import(/* webpackChunkName: "home" */ '@/pages/home'),
 );
-const my = lazy(
+const My = lazy(
   async () => await import(/* webpackChunkName: "my" */ '@/pages/my'),
 );
 
@@ -20,46 +20,29 @@ export interface RouteConfig extends Item {
   children?: Item[];
 }
 
-export const routesData: RouteConfig[] = [
+const routeConfig: RouteObject[] = [
   {
     path: '/',
-    component: <Home />,
-    exact: true,
-    children: [{ path: '/home/e', component: my, exact: true }],
-    // redirect:''
+    element: <Home />,
   },
-  // {
-  //   path: '/my',
-  //   component: my,
-  //   exact: true
-  // }
+  {
+    path: '/my',
+    element: <My />,
+  },
 ];
 
 const AppRouter = () => {
-  const RouteMap = (data: any) => {
-    return data?.map((item: Item) => (
-      <Route key={item.path} path={item.path} element={item.component}>
-        {item?.children != null &&
-          item?.children.length > 0 &&
-          RouteMap(item.children)}
-      </Route>
-    ));
-  };
-
+  const element = useRoutes(routeConfig);
   return (
     <>
+      {/* 页面 */}
       <div id="page">
-        <BrowserRouter>
-          {/* Suspense页面懒加载加载，会有延迟 使用了Suspense可优化交互 */}
-          <Suspense fallback={LoadingElement}>
-            <Routes>{RouteMap(routesData)}</Routes>
-          </Suspense>
-        </BrowserRouter>
+        <Suspense fallback={LoadingElement}>{element}</Suspense>;
       </div>
+
       {/* 导航 */}
       <Tabbar />
     </>
   );
 };
-
 export default AppRouter;
