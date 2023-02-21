@@ -1,9 +1,13 @@
 import React from 'react';
 import utils from './utils';
+import Web3 from './Web3Provider';
+import web3Storage from './Web3Provider/storage';
 
 // 注意排序，
 const models = {
+  web3Storage,
   utils,
+  Web3,
 };
 
 function compose(containers: any) {

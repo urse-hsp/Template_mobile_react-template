@@ -1,4 +1,5 @@
 // 0、1、2分别表示 不开启检查、警告、错误
+// warn:警告
 module.exports = {
   root: true,
   env: {
@@ -21,6 +22,10 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    // '@typescript-eslint/indent': 0,
+    // indent: [1, 2], // 缩进2个空格
+    '@typescript-eslint/strict-boolean-expressions': 'off', // 表达式中的布尔值必须严格是布尔类型
+    '@typescript-eslint/naming-convention': 0, // 驼峰命名
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/space-before-function-paren': 0, // 函数之前的空格
     '@typescript-eslint/member-delimiter-style': 0, // Typescript接口中强制使用分号
@@ -37,7 +42,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 0, // useEffect参数必填 [*****]
     'eol-last': 0, //  关闭文件末尾强制换行
     'no-multiple-empty-lines': [1, { max: 3 }], // 空行最多不能超过3行
-    indent: [1, 2], // 缩进2个空格
     'import/first': 1, // import必须在文件顶端
     'spaced-comment': 1, // 注释符号后必须有空格
     'no-trailing-spaces': 0, // 关闭尾随空白限制,一行结束后面有空格就发出警告
@@ -52,7 +56,7 @@ module.exports = {
     quotes: [2, 'single'], // 单引号 [*****]
     'no-console': 0, // 不禁用console
     'no-irregular-whitespace': 2, // 不规则的空白不允许
-    'no-alert': 2, // 禁止使用alert confirm prompt
+    'no-alert': 1, // 禁止使用alert confirm prompt
     'no-lone-blocks': 2, // 禁止不必要的嵌套块
     'no-class-assign': 2, // 禁止给类赋值
     'no-cond-assign': 2, // 禁止在条件表达式中使用赋值语句
