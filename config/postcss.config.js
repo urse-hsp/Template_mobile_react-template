@@ -17,4 +17,4 @@ module.exports = [
     landscapeUnit: 'vw', // 横屏时使用的单位
     landscapeWidth: 1134, // 横屏时使用的视口宽度
   }),
-]
+];
