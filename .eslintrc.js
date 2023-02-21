@@ -1,3 +1,4 @@
+// 0、1、2分别表示 不开启检查、警告、错误
 module.exports = {
   root: true,
   env: {
@@ -20,13 +21,15 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    '@typescript-eslint/no-floating-promises': 'off', // 未分配提示
+    '@typescript-eslint/comma-dangle': 0, // 末尾添加分号
+    '@typescript-eslint/no-floating-promises': 0, // 未分配提示
     '@typescript-eslint/explicit-function-return-type': 'off', // 缺少返回类型
     camelcase: 0, // 不强制驼峰法命名
     'jsx-quotes': [2, 'prefer-double'], // 强制在JSX属性（jsx-quotes）中一致使用双引号
     'no-debugger': 1, // 禁用debugger
     'no-var': 1, // 对var警告
-    semi: 0, // 不强制使用分号
+    '@typescript-eslint/semi': 0,
+    semi: 0, // 使用分号
     'no-underscore-dangle': 0, // 标识符不能以_开头或结尾 [*****]
     'react-hooks/exhaustive-deps': 0, // useEffect参数必填 [*****]
     'eol-last': 0, //  关闭文件末尾强制换行
