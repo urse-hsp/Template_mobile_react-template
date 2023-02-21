@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.11",
     "antd-mobile": "^5.28.0",
     "bignumber.js": "^9.1.1",
+    "date-fns": "^2.29.3",
     "ethers": "5.7.2",
     "i18next": "^22.4.10",
     "i18next-browser-languagedetector": "^7.0.1",
