@@ -1,4 +1,5 @@
 @import 'reset.css';
+@import './theme.scss';
 
 html,
 body {
@@ -9,7 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  // background-color: rgb(250, 251, 252);
 }
 
 #root {

@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { useRoutes, type RouteObject } from 'react-router-dom';
 import { LoadingElement } from '@/components/loading';
 import Tabbar from '@/components/tabbar';
+import { ConfigProvider } from 'antd-mobile';
 
 const Home = lazy(
   async () => await import(/* webpackChunkName: "home" */ '@/pages/home'),
