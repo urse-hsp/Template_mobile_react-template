@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import models from '@/models';
 import utils from '@/models/utils';
-import Web3Provider from '@/models/Web3Provider';
 import './index.scss';
 
 interface IndexType {

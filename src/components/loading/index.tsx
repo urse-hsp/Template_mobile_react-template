@@ -7,16 +7,14 @@ interface Iprops {
   show: boolean;
 }
 
-// export default function Loading (props: Iprops = { show: false, txt: '' }) {
-//   return props.show ?
-//       (
-//       <div className="custom-loading">
-//         <div className="custom-loading-round"></div>
-//         <div className="custom-loading-text">{props.txt}</div>
-//       </div>
-//       ) :
-//     <></>
-// }
+export default function Loading(props: Iprops = { show: false, txt: '' }) {
+  return props.show ? (
+    <div className="custom-loading">
+      <div className="custom-loading-round"></div>
+      <div className="custom-loading-text">{props.txt}</div>
+    </div>
+  ) : null;
+}
 
 /* loading组件的 React.Element */
 export const LoadingElement = React.createElement(

@@ -24,6 +24,7 @@ module.exports = {
   rules: {
     // '@typescript-eslint/indent': 0,
     // indent: [1, 2], // 缩进2个空格
+    'multiline-ternary': 0, // 三元表达式换行符隔开
     '@typescript-eslint/strict-boolean-expressions': 'off', // 表达式中的布尔值必须严格是布尔类型
     '@typescript-eslint/naming-convention': 0, // 驼峰命名
     '@typescript-eslint/no-var-requires': 'off',
@@ -49,7 +50,7 @@ module.exports = {
     'space-before-function-paren': [0, 'always'], // 定义函数时括号前面要有空格
     'object-curly-spacing': [1, 'always'], // 大括号内总是有空格
     'padded-blocks': 0, // 关闭块内上下空行限制
-    'operator-linebreak': [1, 'after'], // 语句太长时，运算符放在行位
+    'operator-linebreak': [0, 'after'], // 语句太长时，运算符放在行位
     // 'no-unused-vars': 1, // js：不能有声明后未被使用的变量或参数 [*****]
     '@typescript-eslint/no-unused-vars': 1, // no-unused-vars/ts [*****]
     'quote-props': 0, // 关闭判断是否使用引号
