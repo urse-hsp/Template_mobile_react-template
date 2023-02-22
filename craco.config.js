@@ -21,7 +21,6 @@ module.exports = {
     alias: {
       '@': resolve('./src'),
       '@package': resolve('./package.json'),
-      '@config': resolve('./config'),
     },
     plugins,
   },
