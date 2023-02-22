@@ -11,17 +11,6 @@ interface IndexType {
 const Index: React.FC<IndexType> = (props) => {
   const res = utils.useContainer();
 
-  return (
-    <div className="home">
-      {res.theme} home2家里
-      <button
-        onClick={() => {
-          res.setTheme('123');
-        }}
-      >
-        dianji就这啊
-      </button>
-    </div>
-  );
+  return <div className="home">123</div>;
 };
 export default Index;

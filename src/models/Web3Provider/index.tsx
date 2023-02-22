@@ -149,10 +149,10 @@ const useWeb3Hook = (): any => {
   }, []);
 
   useEffect(() => {
-    if (!networkId || !walletType) {
-      return;
-    }
-    handleConnect(networkId, walletType, false);
+    // if (!networkId || !walletType) {
+    //   return;
+    // }
+    // handleConnect(networkId, walletType, false);
   }, [networkId, walletType]);
 
   // 监听登录
