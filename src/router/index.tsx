@@ -1,13 +1,14 @@
 import React, { lazy, Suspense } from 'react';
 import { useRoutes, type RouteObject } from 'react-router-dom';
 import { LoadingElement } from '@/components/loading';
+import Layout from '@/Layout';
 import AppPage from '@/styles/app';
 
 const Home = lazy(
   async () => await import(/* webpackChunkName: "home" */ '@/pages/home'),
 );
 const My = lazy(
-  async () => await import(/* webpackChunkName: "my" */ '@/pages/my'),
+  async () => await import(/* webpackChunkName: "my" */ '@/pages/my/index'),
 );
 
 interface Item {
@@ -23,10 +24,20 @@ export interface RouteConfig extends Item {
 const routeConfig: RouteObject[] = [
   {
     path: '/',
-    element: <Home />,
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      // {
+      //   path: '/My',
+      //   element: <My />,
+      // },
+    ],
   },
   {
-    path: '/my',
+    path: '/My2',
     element: <My />,
   },
 ];
