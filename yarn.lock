@@ -1821,6 +1821,11 @@
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@infte/reset.css@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/@infte/reset.css/-/reset.css-0.0.1.tgz#5cd0a6c2d53f4ba7538f8bd790e3961b56b2acc2"
+  integrity sha512-jfm0dclm67LUKtmiAdQpuHKvFNtVa22NGMDDBNjEAwovSgMN1Oln2qmpIIolcwG6312wwBQPZZGTuRIFDNWOoA==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.npmmirror.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -10162,11 +10167,6 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmmirror.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
-
-reset.css@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmmirror.com/reset.css/-/reset.css-2.0.2.tgz#9c01309c820b72e8f219ebcc8e1411949604f7d7"
-  integrity sha512-HG5RQLYcAxou3yw+Gnzwan1jJCbOcIBZjwoD/YLWuAd8kkuDI/ZqC0uRhY4ReKOOJaM1Y1kvwebHOwK4P8Sevg==
 
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"
