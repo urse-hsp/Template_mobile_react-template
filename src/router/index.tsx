@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { useRoutes, type RouteObject } from 'react-router-dom';
 import { LoadingElement } from '@/components/loading';
-import Tabbar from '@/components/tabbar';
+import AppPage from '@/styles/app';
 
 const Home = lazy(
   async () => await import(/* webpackChunkName: "home" */ '@/pages/home'),
@@ -34,15 +34,9 @@ const routeConfig: RouteObject[] = [
 const AppRouter = () => {
   const element = useRoutes(routeConfig);
   return (
-    <>
-      {/* 页面 */}
-      <div id="page">
-        <Suspense fallback={LoadingElement}>{element}</Suspense>;
-      </div>
-
-      {/* 导航 */}
-      <Tabbar />
-    </>
+    <Suspense fallback={LoadingElement}>
+      <AppPage>{element}</AppPage>
+    </Suspense>
   );
 };
 export default AppRouter;

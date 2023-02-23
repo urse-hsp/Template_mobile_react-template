@@ -3,11 +3,11 @@ import { createContainer } from 'unstated-next';
 import { storage } from '@/utils';
 
 interface defaultStatesType {
-  theme: string | 'light' | 'dark';
+  theme: 'light' | 'dark';
   globalLoading: boolean;
 }
 const defaultStates: defaultStatesType = {
-  theme: storage('theme') ?? 'light',
+  theme: storage('theme') !== 'dark' ? 'light' : 'dark',
   globalLoading: false,
 };
 

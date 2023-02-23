@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from '@/router';
 import reportWebVitals from '@/utils/reportWebVitals';
-import Provider from '@/models';
+import AppProvider from '@/models';
 import '@/styles/index.scss';
 import '@/locales';
 
@@ -13,9 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider>
+      <AppProvider>
         <App />
-      </Provider>
+      </AppProvider>
     </BrowserRouter>
   </React.StrictMode>,
 );

@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button, Modal } from 'antd';
 
-import utils from '@/models/utils';
-import './index.scss';
+const App: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-interface IndexType {
-  isVisible?: boolean;
-  onClose?: () => any;
-}
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
 
-const Index: React.FC<IndexType> = (props) => {
-  const res = utils.useContainer();
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
 
-  return <div className="home">123</div>;
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <>
+      <Button type="primary" onClick={showModal}>
+        Open Modal
+      </Button>
+      <Modal
+        title="Basic Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
+    </>
+  );
 };
-export default Index;
+
+export default App;
