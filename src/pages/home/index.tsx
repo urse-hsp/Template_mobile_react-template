@@ -1,38 +1,11 @@
-import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import React, { useState, useEffect } from 'react';
 
-const App: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+interface IndexType {
+  isVisible?: boolean;
+  onClose?: () => any;
+}
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
-  return (
-    <>
-      <Button type="primary" onClick={showModal}>
-        Open Modal
-      </Button>
-      <Modal
-        title="Basic Modal"
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-        <p>Some contents...</p>
-      </Modal>
-    </>
-  );
+const Index: React.FC<IndexType> = (props) => {
+  return <>home</>;
 };
-
-export default App;
+export default Index;
