@@ -1,10 +1,9 @@
 {
-  "name": "aww",
+  "name": "template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@metamask/detect-provider": "^2.0.0",
-    "add": "^2.0.6",
     "antd-mobile": "^5.28.0",
     "bignumber.js": "^9.1.1",
     "date-fns": "^2.29.3",
