@@ -1,6 +1,6 @@
 :root:root {
   // antd-mobile 目前提供的全局性 CSS 变量：
-  --adm-color-primary: #1677ff;
+  --adm-color-primary: red;
   // --adm-color-success: #00b578;
   // --adm-color-warning: #ff8f1f;
   // --adm-color-danger: #ff3141;
@@ -20,3 +20,19 @@
   //   helvetica, segoe ui, arial, roboto, 'PingFang SC', 'miui',
   //   'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
 }
+
+// # 一般定义主题的变量组成/搭配可自由切换深色模式
+$primary: var(--adm-color-primary); // 主题色
+$success: var(--adm-color-success); // 成功色
+$warning: var(--adm-color-warning); // 警告色
+$danger: var(--adm-color-danger); // 危险/报错
+
+$white: var(--adm-color-white); // 白色
+$text: var(--adm-color-text); // 文本颜色
+$text-secondary: var(--adm-color-text-secondary); // 辅助文本
+$weak: var(--adm-color-weak); // 弱色
+
+$light: var(--adm-color-light); // 光/线
+$border: var(--adm-color-border); // 边框
+$box: var(--adm-color-box); // 盒子背景
+$background: var(--adm-color-background); // 背景颜色
