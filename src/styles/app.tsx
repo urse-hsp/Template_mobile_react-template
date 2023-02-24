@@ -21,8 +21,8 @@ const App: React.FC<AppPageType> = (props) => {
   }, [enableDarkMode]);
 
   useLayoutEffect(() => {
-    document.body.style.backgroundColor = token.colorBgBase;
-  }, [token.colorBgBase]);
+    document.body.style.backgroundColor = token.colorBgLayout;
+  }, [token.colorBgLayout]);
 
   return (
     <>
@@ -52,6 +52,8 @@ const AppPage: React.FC<AppPageType> = (props) => {
 
   // colorBorder // 边框
   // colorBgElevated// 盒子容器背景
+  // colorBgLayout // 用于页面整体布局的背景色最外层
+  // colorBgElevated // 容器背景色，在暗色模式下该 token 的色值会比 `colorBgContainer` 要亮一些。例如：模态框、弹出框、菜单等。
   // colorBgBase // 背景颜色
 
   return (
