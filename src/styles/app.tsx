@@ -1,19 +1,13 @@
-import React, { type ReactNode, useLayoutEffect, useState } from 'react';
+import React, { type ReactNode, useState } from 'react';
 import { SearchBar, Switch } from 'antd-mobile';
+import utils from '@/models/utils';
 interface AppPageType {
   children: ReactNode;
 }
 
 const AppPage: React.FC<AppPageType> = (props) => {
-  // const { theme: themeType } = utils.useContainer();
-
-  const [enableDarkMode, setEnableDarkMode] = useState(true);
-  useLayoutEffect(() => {
-    document.documentElement.setAttribute(
-      'data-prefers-color-scheme',
-      enableDarkMode ? 'dark' : 'light',
-    );
-  }, [enableDarkMode]);
+  const { theme: themeType, setTheme } = utils.useContainer();
+  const [enableDarkMode, setEnableDarkMode] = useState(themeType === 'light');
 
   return (
     <>
@@ -21,6 +15,7 @@ const AppPage: React.FC<AppPageType> = (props) => {
         checked={enableDarkMode}
         onChange={(v) => {
           setEnableDarkMode(v);
+          setTheme(enableDarkMode ? 'dark' : 'light');
         }}
       />
       <SearchBar placeholder="请输入内容" />

@@ -27,6 +27,7 @@ function useUtils(customInitialStates = {}) {
   const setTheme = useCallback(
     (t: string) => {
       t = t ?? theme;
+      document.documentElement.setAttribute('data-prefers-color-scheme', t);
       window.document.documentElement.setAttribute('data-theme', t);
       storage('theme', t);
       setThemeProp(t);
