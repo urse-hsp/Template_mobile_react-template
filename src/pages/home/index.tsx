@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Button, Modal, theme } from 'antd';
+
+const { useToken } = theme;
 
 const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { token } = useToken();
 
   const showModal = () => {
     setIsModalOpen(true);
@@ -19,7 +22,7 @@ const App: React.FC = () => {
   return (
     <>
       <Button type="primary" onClick={showModal}>
-        Open Modal
+        Open Modal{token.colorPrimaryBg}
       </Button>
       <Modal
         title="Basic Modal"

@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useLayoutEffect } from 'react';
 import { createContainer } from 'unstated-next';
 import { storage } from '@/utils';
 
@@ -33,7 +33,6 @@ function useUtils(customInitialStates = {}) {
     },
     [setThemeProp],
   );
-
   return {
     theme,
     setTheme,
